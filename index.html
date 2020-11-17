@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Challenges‏</title>
+</head>
+<body>
+<h2>JavaScript Challenges</h2>
+<p id="c1">
+</p>
+<p id="c2"></p>
+<p id="c3"></p>
+<p id="c4"></p>
+<p id="c5"></p>
+<p id="c6"></p>
+
+<script>
+// Challenge #1
+var arr = [-3,-2,-1,0,1,2,3];
+function Challenge1(array){
+    var newArr = [];
+    for (i = 0; i < array.length; i++) {
+        if(array[i]>=0){
+            newArr.push(array[i]);
+        } 
+    }
+    return newArr;
+}
+document.getElementById("c1").innerHTML = Challenge1(arr);
+// Challenge #2
+function Challenge2(){
+        var arr1 = [10,20];
+        var arr2 = [30,40,50];
+        var concatArr = arr1.concat(arr2);
+    return concatArr;
+    console.log(arr1);
+}
+document.getElementById("c2").innerHTML = Challenge2();
+//Challenge #3
+var obj = {
+    "fname": "Alia",
+    "lname": "Zatari"
+ };
+ if(obj.hasOwnProperty('fname')){
+    document.getElementById("c3").innerHTML = "it's found";
+
+ }
+ 
+    
+
+
+// Callenge #4
+function Challenge4() {
+  var letters = ["A", "B", "C", "D"];
+  return Array.isArray(letters);
+}
+  document.getElementById("c4").innerHTML =Challenge4();
+
+// Challenge #5
+const str = 'alia zatari';
+function Challenge5(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+const caps = str.split(' ').map(Challenge5).join(' ');
+
+document.getElementById("c5").innerHTML = caps;
+
+// Challenge #6
+function bubble_Sort(a)
+{
+    var swapp;
+    var n = a.length-1;
+    var x=a;
+    do {
+        swapp = false;
+        for (var i=0; i < n; i++)
+        {
+            if (x[i] < x[i+1])
+            {
+               var temp = x[i];
+               x[i] = x[i+1];
+               x[i+1] = temp;
+               swapp = true;
+            }
+        }
+        n--;
+    } while (swapp);
+ return x; 
+}
+
+document.getElementById("c6").innerHTML = bubble_Sort([12, 23, 234, 456]);
+
+</script>
+
+</body>
+</html>
